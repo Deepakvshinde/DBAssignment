@@ -1,0 +1,13 @@
+
+<div class="container">
+        <div class="row">
+            <div class="col-6">
+                <app-dropdown [values]="allRegions$ | async" [label]="SELECT_REGION" (valueChange)="getSelectedValue($event)"></app-dropdown>
+            </div>   
+            <div class="col-6">
+                <app-dropdown [values]="allRegionWiseCountry$ | async" [label]="SELECT_COUNTRY"  (valueChange)="getSelectedValue($event)" [isDisabled]="isDisabledFlag"></app-dropdown>
+            </div>
+        </div>
+    </div>
+<br><br>
+<app-country-details *ngIf="selectedCountryDetailsArr && selectedCountryDetailsArr.length > 0" [contryDetails]="selectedCountryDetailsArr"></app-country-details>

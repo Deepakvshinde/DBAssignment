@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="region">{{label}}</label>
+    <select  #userSelection class="form-control" name="value" (change)="selectedValue(userSelection.value)"  [disabled]="isDisabled">
+        <option value="">Select an option</option>
+        <option *ngFor="let val of values" [value]="val.value">
+            {{val.label}}
+        </option>
+    </select>
+</div>

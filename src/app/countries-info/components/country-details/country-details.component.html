@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Population</th>
+        <th scope="col">Currencies</th>
+        <th scope="col">Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cd of contryDetails">
+        <th>{{cd.name}}</th>
+        <td>{{cd.capital}}</td>
+        <td>{{cd.population}}</td>
+        <td>{{cd.currencies[0].name}}</td>
+        <td><img src="{{cd.flag}}" width="50" height="50"/></td>
+      </tr>
+    </tbody>
+  </table>
